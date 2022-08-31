@@ -7,7 +7,7 @@ provider "aws"{
 # config AWS availibility zones in current region
 #-----------------
 
-data "aws_availibility_zones" "all" {}
+data "aws_availability_zones" "all" {}
 
 # creating security groups that controlls traffic
 #-----------------
@@ -89,7 +89,7 @@ resource "aws_launch_configuration" "example"{
 		    nohup busybox httpd -f -p "${var.server_port}"&
 	            EOF
 
-	lifyclycle{
+	lifeclycle{
 		create_before_destroy = true
 	}
 }
